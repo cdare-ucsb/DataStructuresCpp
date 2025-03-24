@@ -13,7 +13,7 @@ GTEST_DIR = lib/googletest/googletest
 TARGET = driver
 
 # Test target
-TEST_TARGETS = test_binary_tree test_hash_table
+TEST_TARGETS = test_binary_tree test_hash_table test_prefix_trie
 
 
 # GoogleTest sources
@@ -25,7 +25,7 @@ GTEST_SRC = \
 SRC = $(SRC_DIR)/driver.cpp
 
 # Automatically discover modules by finding all src/*/driver.cpp
-MODULES := BinaryTree HashTable
+MODULES := BinaryTree HashTable PrefixTrie
 
 .PHONY: all test clean $(MODULES)
 
@@ -46,6 +46,9 @@ test_binary_tree: $(TEST_DIR)/test_binary_tree.cpp $(GTEST_SRC)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 test_hash_table: $(TEST_DIR)/test_hash_table.cpp $(GTEST_SRC)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
+
+test_prefix_trie: $(TEST_DIR)/test_prefix_trie.cpp $(GTEST_SRC)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 
