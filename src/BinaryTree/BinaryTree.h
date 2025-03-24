@@ -11,7 +11,7 @@
 #include <sstream>
 #include <algorithm>
 #include "TreeNode.h"
-#include "Comparable.h"
+#include "../Comparable.h"
 
 
 template<Comparable T>
