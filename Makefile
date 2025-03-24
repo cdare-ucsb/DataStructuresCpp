@@ -25,7 +25,7 @@ GTEST_SRC = \
 SRC = $(SRC_DIR)/driver.cpp
 
 # Automatically discover modules by finding all src/*/driver.cpp
-MODULES := BinaryTree HashTable PrefixTrie
+MODULES := BinaryTree HashTable PrefixTrie MaxHeap
 
 .PHONY: all test clean $(MODULES)
 
